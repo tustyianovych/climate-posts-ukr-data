@@ -1,1 +1,13 @@
 .ipynb_checkpoints
+# Large model files
+*.bin
+*.model
+models/fasttext/*.bin
+models/bertopic/bertopic_model/
+*.pkl
+*.h5
+*.pt
+
+# But keep training scripts
+!train_*.py
+!*.md

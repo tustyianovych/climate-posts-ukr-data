@@ -1,0 +1,69 @@
+BASE MODEL
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ geopolitical_and_war_dynamics_presence_freq        =  0.7519 (SE: 0.1582, p: 0.0000)*** [Large]
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ env_and_climate_issues_presence_freq               = -0.2183 (SE: 0.0822, p: 0.0079)**  [Small]
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ war_related_environmental_and_resource_impact_presence_freq = -0.4462 (SE: 0.1730, p: 0.0099)**  [Medium]
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ energy_and_resources_presence_freq                 =  0.6329 (SE: 0.2144, p: 0.0032)**  [Large]
+pairwise_energy_and_resources_presence_and_power_outages_presence_freq ~ energy_and_resources_presence_freq                 =  0.5579 (SE: 0.0997, p: 0.0000)*** [Large]
+pairwise_critical_infrastructure_presence_and_power_outages_presence_freq ~ critical_infrastructure_presence_freq              =  0.4904 (SE: 0.0952, p: 0.0000)*** [Medium]
+
+DIRECT MODEL
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ geopolitical_and_war_dynamics_presence_freq        =  0.4078 (SE: 0.1076, p: 0.0002)*** [Medium]
+pairwise_energy_and_resources_presence_and_power_outages_presence_freq ~ energy_and_resources_presence_freq                 =  0.5069 (SE: 0.0961, p: 0.0000)*** [Large]
+pairwise_critical_infrastructure_presence_and_power_outages_presence_freq ~ critical_infrastructure_presence_freq              =  0.4745 (SE: 0.0854, p: 0.0000)*** [Medium]
+reaction_score_mean                                ~ geopolitical_and_war_dynamics_presence_freq        = -0.0076 (SE: 0.0036, p: 0.0319)*   [Small]
+
+MEDIATION MODEL
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ geopolitical_and_war_dynamics_presence_freq        =  0.7520 (SE: 0.1582, p: 0.0000)*** [Large]
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ war_related_environmental_and_resource_impact_presence_freq = -0.4460 (SE: 0.1730, p: 0.0099)**  [Medium]
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ energy_and_resources_presence_freq                 =  0.6328 (SE: 0.2145, p: 0.0032)**  [Large]
+pairwise_energy_and_resources_presence_and_power_outages_presence_freq ~ energy_and_resources_presence_freq                 =  0.4813 (SE: 0.1238, p: 0.0001)*** [Medium]
+pairwise_critical_infrastructure_presence_and_power_outages_presence_freq ~ critical_infrastructure_presence_freq              =  0.4821 (SE: 0.1124, p: 0.0000)*** [Medium]
+
+TEMPORAL MODEL
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ geopolitical_and_war_dynamics_presence_freq        =  0.7967 (SE: 0.1720, p: 0.0000)*** [Large]
+pairwise_energy_and_resources_presence_and_power_outages_presence_freq ~ energy_and_resources_presence_freq                 =  0.4885 (SE: 0.1066, p: 0.0000)*** [Medium]
+pairwise_critical_infrastructure_presence_and_power_outages_presence_freq ~ critical_infrastructure_presence_freq              =  0.4909 (SE: 0.1102, p: 0.0000)*** [Medium]
+pairwise_env_and_climate_issues_presence_and_power_outages_presence_freq ~ env_and_climate_issues_presence_freq               =  0.1892 (SE: 0.0753, p: 0.0120)*   [Small]
+
+CUSTOM MEAN MODEL
+war_related_environmental_and_resource_impact_presence_freq ~ energy_and_resources_presence_freq                 =  2.2957 (SE: 1.4265, p: 0.1075)    [Large]
+war_related_environmental_and_resource_impact_presence_freq ~ pairwise_energy_and_resources_presence_and_power_outages_presence_freq = -2.7888 (SE: 1.4806, p: 0.0596)    [Large]
+env_and_climate_issues_presence_freq               ~ pairwise_env_and_climate_issues_presence_and_power_outages_presence_freq =  1.1540 (SE: 0.2229, p: 0.0000)*** [Large]
+env_and_climate_issues_presence_freq               ~ pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq = -1.3169 (SE: 0.2419, p: 0.0000)*** [Large]
+energy_and_resources_presence_freq                 ~ critical_infrastructure_presence_freq              =  3.3966 (SE: 0.7956, p: 0.0000)*** [Large]
+energy_and_resources_presence_freq                 ~ pairwise_critical_infrastructure_presence_and_power_outages_presence_freq = -2.5982 (SE: 0.9271, p: 0.0051)**  [Large]
+energy_and_resources_presence_freq                 ~ pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq =  0.3151 (SE: 0.1287, p: 0.0143)*   [Medium]
+
+CUSTOM MEDIAN MODEL
+reaction_score_median                              ~ env_and_climate_issues_presence_freq  = -0.0069 (SE: 0.0034, p: 0.0423)*   [Small]
+
+CUSTOM SUM MODEL
+reaction_score_sum                                 ~ env_and_climate_issues_presence_freq  = -0.3631 (SE: 0.1087, p: 0.0008)*** [Medium]
+
+CUSTOM PAIRWISE MODEL
+reaction_score_sum                                 ~ env_and_climate_issues_presence_freq               = -0.3630 (SE: 0.1087, p: 0.0008)*** [Medium]
+reaction_score_sum                                 ~ energy_and_resources_presence_freq                 =  0.7505 (SE: 0.4163, p: 0.0714)    [Large]
+reaction_score_sum                                 ~ critical_infrastructure_presence_freq              = -0.6839 (SE: 0.7427, p: 0.3571)    [Large]
+reaction_score_sum                                 ~ pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq = -0.3838 (SE: 0.4125, p: 0.3522)    [Medium]
+reaction_score_sum                                 ~ pairwise_war_related_environmental_and_resource_impact_presence_and_power_outages_presence_freq =  1.0001 (SE: 0.5465, p: 0.0673)    [Large]
+reaction_score_sum                                 ~ pairwise_env_and_climate_issues_presence_and_power_outages_presence_freq = -0.4388 (SE: 0.2896, p: 0.1298)    [Medium]
+reaction_score_sum                                 ~ pairwise_energy_and_resources_presence_and_power_outages_presence_freq =  0.3017 (SE: 0.7536, p: 0.6889)    [Medium]
+reaction_score_sum                                 ~ pairwise_critical_infrastructure_presence_and_power_outages_presence_freq =  1.1015 (SE: 1.0472, p: 0.2929)    [Large]
+
+CUSTOM WITHOUT PAIRS MODEL
+reaction_score_median                              ~ env_and_climate_issues_presence_freq               = -0.0090 (SE: 0.0027, p: 0.0008)*** [Small]
+reaction_score_sum                                 ~ env_and_climate_issues_presence_freq               = -0.4050 (SE: 0.0887, p: 0.0000)*** [Medium]
+
+CUSTOM POWER OUTAGE MODEL
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ war_related_environmental_and_resource_impact_presence_freq = -0.4460 (SE: 0.1709, p: 0.0090)**  [Medium]
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ geopolitical_and_war_dynamics_presence_freq        =  0.7519 (SE: 0.1563, p: 0.0000)*** [Large]
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ env_and_climate_issues_presence_freq               = -0.2184 (SE: 0.0812, p: 0.0071)**  [Small]
+pairwise_geopolitical_and_war_dynamics_presence_and_power_outages_presence_freq ~ energy_and_resources_presence_freq                 =  0.6328 (SE: 0.2118, p: 0.0028)**  [Large]
+pairwise_env_and_climate_issues_presence_and_power_outages_presence_freq ~ energy_and_resources_presence_freq                 =  0.7434 (SE: 0.2323, p: 0.0014)**  [Large]
+pairwise_critical_infrastructure_presence_and_power_outages_presence_freq ~ critical_infrastructure_presence_freq              =  0.4963 (SE: 0.1107, p: 0.0000)*** [Medium]
+
+CUSTOM TOPICS ONLY MODEL
+war_related_environmental_and_resource_impact_presence_freq ~ geopolitical_and_war_dynamics_presence_freq        =  0.5577 (SE: 0.1927, p: 0.0038)**  [Large]
+war_related_environmental_and_resource_impact_presence_freq ~ energy_and_resources_presence_freq                 =  0.7630 (SE: 0.4728, p: 0.1065)    [Large]
+critical_infrastructure_presence_freq              ~ geopolitical_and_war_dynamics_presence_freq        =  0.2773 (SE: 0.1243, p: 0.0256)*   [Small]
+energy_and_resources_presence_freq                 ~ critical_infrastructure_presence_freq              =  1.9555 (SE: 0.7393, p: 0.0082)**  [Large]
