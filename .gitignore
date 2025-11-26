@@ -2,8 +2,8 @@
 # Large model files
 *.bin
 *.model
-models/fasttext/*.bin
-models/bertopic/bertopic_model/
+models/fasttext-models/*
+models/bertopic-models/*
 *.pkl
 *.h5
 *.pt
