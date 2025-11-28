@@ -211,8 +211,6 @@ Simple notebook that runs on demo data and completes in 2-3 minutes.
 - ☑ `LICENSE` (MIT recommended)
 - ☑ `data/` (raw and processed datasets with backups)
 - ☑ `notebooks/01-05_*.ipynb` (your analysis notebooks)
-<!-- - ☑ `config.py` (configuration parameters) -->
-<!-- - ☑ `scripts/reproduce_paper_results.py` (optional but recommended) -->
 - ☑ Clear folder structure
 
 **Folder structure:**
@@ -229,7 +227,6 @@ climate-posts-ukr-data/
 └── models/
     └── bertopic-models/
     └── fasttext-models/
-<!-- ├── config.py -->
 ├── notebooks/
 │   ├── 01_data_exploration/
 │   ├── 02_changepoint_detection
